@@ -29,4 +29,4 @@
 
 ## Пример страницы
 
-
+![hw1-example-catalog-page](https://github.com/alexeycoder/gb_html_css/assets/109767480/309feeb8-fd86-40fb-ac92-f0aecf8997cd)
