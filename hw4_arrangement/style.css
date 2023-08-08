@@ -1,0 +1,168 @@
+@font-face {
+	font-family: Gilroy-Regular;
+	src: url('fonts/Gilroy-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Gilroy-Medium;
+	src: url('fonts/Gilroy-Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Gilroy-SemiBold;
+	src: url('fonts/Gilroy-Semibold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Gilroy-Bold;
+	src: url('fonts/Gilroy-Bold.woff2') format('woff2');
+}
+
+/* COMMON */
+
+:root {
+	--brand-color-rgb: 242, 88, 34;
+	--brand-color: rgb(var(--brand-color-rgb));
+
+	--temp-border: 0.5px dotted black;
+}
+
+body {
+	background-color: white;
+	color: black;
+	font-family: Gilroy-Regular, sans-serif;
+
+	border: var(--temp-border, );
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.pic_middle {
+	vertical-align: middle;
+}
+
+.text_orange {
+	color: var(--brand-color);
+}
+
+.page {
+	margin-left: auto;
+	margin-right: auto;
+	/* width: fit-content; */
+	display: table;
+}
+
+/* HEADER */
+
+.header {
+	padding-top: 40px;
+
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	column-gap: 500px;
+
+	align-items: center;
+}
+
+.header__logo {
+	font-family: Gilroy-Bold;
+	font-size: 24px;
+}
+
+.header__logo-pic {
+	margin-right: 14px;
+}
+
+.menu {
+	width: 533px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	font-family: Gilroy-Medium;
+	font-size: 14px;
+}
+
+.menu__link {
+	white-space: nowrap;
+}
+
+.menu__link_self-pointing {
+	font-family: Gilroy-SemiBold;
+	color: var(--brand-color);
+}
+
+/* TOP */
+
+.top__content {
+	margin-top: 84px;
+	margin-bottom: 162px;
+
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+.top__info {
+	width: 522px;
+}
+
+.top__title {
+	margin-bottom: 17px;
+
+	font-family: Gilroy-Bold;
+	font-size: 57px;
+}
+
+.top__subtitle {
+	color: #888;
+	font-family: Gilroy-Medium;
+	font-size: 20px;
+}
+
+.top__buttons {
+	margin-top: 37px;
+}
+
+.top__button {
+	padding: 15px 35px;
+
+	color: #aaa;
+	font-family: Gilroy-Bold;
+	font-size: 15px;
+
+	border: none;
+	background: none;
+}
+
+.top__button_active {
+	color: white;
+
+	border-radius: 50px;
+	background: var(--brand-color);
+	box-shadow: 4px 4px 8px 0px rgba(var(--brand-color-rgb), 0.20);
+}
+
+.top__logos {
+	margin-top: 96px;
+	margin-bottom: 96px;
+
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	column-gap: 48px;
+}
+
+.pic_left-offset-fix-30px {
+	margin-left: -30px;
+}
