@@ -1,0 +1,334 @@
+@font-face {
+	font-family: Gilroy-Regular;
+	src: url('fonts/Gilroy-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Gilroy-Medium;
+	src: url('fonts/Gilroy-Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Gilroy-SemiBold;
+	src: url('fonts/Gilroy-Semibold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Gilroy-Bold;
+	src: url('fonts/Gilroy-Bold.woff2') format('woff2');
+}
+
+/* COMMON */
+
+:root {
+	--brand-color-rgb: 242, 88, 34;
+	--brand-color: rgb(var(--brand-color-rgb));
+	--temp-border: 0.5px dotted black;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: white;
+	color: black;
+	font-family: Gilroy-Regular, sans-serif;
+}
+
+.bg-greyed {
+	background-color: #fafafa;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.center {
+	max-width: 1172px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.text {
+	color: #666;
+	font-style: normal;
+	line-height: 150%;
+}
+
+.title,
+.subtitle {
+	font-family: Gilroy-Bold;
+}
+
+.pic_middle {
+	vertical-align: middle;
+}
+
+.fg_orange {
+	color: var(--brand-color);
+}
+
+.button {
+	border-radius: 50px;
+	min-height: 50px;
+	border: none;
+
+	color: white;
+	background: var(--brand-color);
+	box-shadow: 4px 4px 8px 0px rgba(var(--brand-color-rgb), 0.20);
+
+	font-family: Gilroy-Bold;
+}
+
+.button img,
+.button svg {
+	vertical-align: middle;
+}
+
+.button_inactive {
+	color: #aaa;
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+/* TEMPORARY DEV BLOCK BORDERS */
+
+/* .header,
+.top,
+.features,
+.services {
+	border: var(--temp-border, );
+}
+
+.header__content,
+.top__content,
+.top__logos,
+.features__content,
+.services__content,
+.services__intro {
+	border: var(--temp-border, );
+} */
+
+/* HEADER */
+
+.header__content {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	font-family: Gilroy-Bold;
+	font-size: 24px;
+}
+
+.header__logo-pic {
+	margin-right: 14px;
+}
+
+.header__menu {
+	width: 533px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.menu {
+	font-family: Gilroy-Medium;
+	font-size: 14px;
+}
+
+.menu__link {
+	white-space: nowrap;
+}
+
+.menu__link_self-pointing {
+	font-family: Gilroy-SemiBold;
+	color: var(--brand-color);
+}
+
+/* TOP */
+
+.top__content {
+	padding-top: 44px;
+	padding-bottom: calc(200px - 96px);
+	/* замена padding-bottom: 162px; (соответствует макету HomeWork4)
+	на (200px-96px) для соответствия общему макету на Page1 */
+
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+.top__info {
+	width: 522px;
+}
+
+.top__title {
+	margin-bottom: 17px;
+
+	font-size: 57px;
+}
+
+.top__text {
+	color: #888;
+	font-family: Gilroy-Medium;
+	font-size: 20px;
+	line-height: normal;
+}
+
+.top__buttons {
+	margin-top: 37px;
+	display: flex;
+	gap: calc(72px - 35px);
+}
+
+.top__button {
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+.top__logos {
+	padding-top: 96px;
+	padding-bottom: 96px;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 48px;
+}
+
+.pic_left-offset-fix-30px {
+	margin-left: -30px;
+}
+
+/* FEATURES */
+
+.features__content {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.features__item {
+	padding: 40px 30px 25px 30px;
+}
+
+.features__item.item_shade {
+	background: white;
+	box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+}
+
+.features__subtitle {
+	margin-top: 25px;
+	margin-bottom: 17px;
+
+	font-size: 24px;
+}
+
+.features__text {
+	font-size: 15px;
+}
+
+.features__button {
+	margin-top: 25px;
+
+	border: none;
+	background: none;
+	font-family: Gilroy-Bold;
+	font-size: 11px;
+}
+
+/* SERVICES */
+
+.services__content {
+	padding-top: 92px;
+	padding-bottom: 100px;
+}
+
+.services__intro {
+	max-width: 686px;
+	margin-bottom: 54px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.services__title {
+	font-size: 45px;
+	margin-bottom: 19px;
+}
+
+.services__intro .services__text {
+	font-size: 16px;
+}
+
+.services__items .services__text {
+	font-size: 15px;
+	text-align: center;
+	color: #aaa;
+}
+
+.services__items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.services__item {
+	padding-left: 30px;
+	padding-right: 30px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	overflow: hidden;
+	position: relative;
+
+	background-color: white;
+}
+
+.services__pic {
+	position: absolute;
+	/* поскольку высота изображений различается, убираем их из document flow
+	контейнера, чтобы иметь возможность визуально выровнять заголовки под
+	изображениями в одну горизонтальную линию с помощью простого margin-top */
+}
+
+.services__item.item_shade {
+	box-shadow: 15px 25px 60px -5px rgba(0, 0, 0, 0.10);
+}
+
+.services__subtitle {
+	margin-top: 295px;
+	margin-bottom: 22px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.services__button {
+	margin-top: 39px;
+	margin-bottom: 50px;
+
+	padding-left: 46px;
+	padding-right: 26px;
+
+	font-size: 13px;
+}
+
+.services__button img {
+	margin-left: 6px;
+}
